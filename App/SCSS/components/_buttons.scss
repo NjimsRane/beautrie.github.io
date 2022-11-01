@@ -1,0 +1,18 @@
+button{
+    font-size:1.4rem;
+    padding:0.3em 1em;
+    font-weight:600;
+
+    background-color:transparent;
+    border:2px solid rebeccapurple;
+    border-radius:3px;
+
+    transition:all 0.5s;
+    cursor: pointer;
+    a{
+        color:#fff;
+    }
+    &:hover{
+        background-color:rebeccapurple;
+    }
+}

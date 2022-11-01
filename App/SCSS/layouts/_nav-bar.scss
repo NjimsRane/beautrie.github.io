@@ -1,0 +1,62 @@
+.nav-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    width:100%;
+   
+    .logo{
+        font-size:2rem;
+        color:#fff;
+        font-weight:700;
+        
+        span{
+            color:rebeccapurple;
+        }
+    }
+    
+    .menu-links{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        
+        gap:5em;
+
+        li{
+            font-size:1.4rem;
+            text-transform:capitalize;
+            font-weight:600;
+            cursor: pointer;
+
+            a{
+                color:#fff;
+                border-radius:3px;
+                position: relative;
+                
+                &::after{
+                    position:absolute;
+                    content:"";
+                    width:0;
+                    height:0.2em;
+                    left:0;
+                    top:1.2em;
+                    
+                    background-color:rebeccapurple;
+                    transition:all 0.5s;
+                }
+
+                &:hover::after{
+                    width:100%;
+                }
+                &.active::after{
+                    width:100%;
+                }
+            }
+           
+        }
+    }
+    .btns-links{
+        display:flex;
+        gap:1em;
+    }
+}
