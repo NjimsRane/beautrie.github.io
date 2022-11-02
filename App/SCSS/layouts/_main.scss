@@ -1,0 +1,120 @@
+.offer-section{
+    margin-block:2em;
+    background-color:#D2D4D5;
+    
+    h1{
+        font-size:4em;
+        text-align:center;
+        margin-bottom:1em;
+    }
+    .wrapper{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        grid-template-rows:1fr 1fr;
+        gap:0.5em;
+
+        grid-template-areas:
+            "box1 box2 box2"
+            "box3 box3 box4"
+        ;
+      
+        .panel{
+            position: relative;
+            height:40vh;
+            border-radius:5px;
+            box-shadow:0 5px 10px rgba(0,0,0,0.5);
+            overflow:hidden;
+            .panel-image{
+                position:absolute;
+                height:100%;
+                width:100%;
+                top:0;
+                left:0;
+
+                background-position:center center;
+                background-repeat:no-repeat;
+                background-size:cover;
+                filter:brightness(0.6);
+            }
+
+            .panel-text{
+                position:absolute;
+                left:1em;
+                bottom:1em;
+                color:#D2D4D5;
+                line-height:1.5;
+                span{
+                    color:gold;
+                }
+            }
+        }
+
+        .box1{
+            grid-area:box1;
+        }
+        .box2{
+            grid-area:box2;
+        }
+        .box3{
+            grid-area:box3;
+        }
+        .box4{
+            grid-area:box4;
+        }
+      
+       
+    }
+    
+}
+
+.about-section{
+    margin-bottom:2em;
+    background-color:#547484;
+    
+    .wrapper-area{
+        width:100%;
+       
+        display:grid;
+        grid-template-columns:50% 1fr;
+        grid-template-rows:50% 1fr;
+
+        grid-template-areas:
+            'about-text about-image'
+            'why-us-image why-us-text'
+        ;
+        gap:1em;
+
+        .text-area{
+            font-size:1.5rem;
+            line-height:1.5;
+            h3{
+                color:#fff;
+            }
+            p{
+                color:#D2D4D5;
+                text-align:justify;
+            }
+        }
+        img{
+            width:100%;
+            border-radius:3px;
+        }
+        
+        button{
+            margin-top:2em;
+        }
+
+        .about-text{
+            grid-area:about-text;
+        }
+        .about-image{
+            grid-area:about-image;
+        }
+        .why-us-text{
+            grid-area:why-us-text;
+        }
+        .why-us-image{
+            grid-area:why-us-image;
+        }
+    }
+}
