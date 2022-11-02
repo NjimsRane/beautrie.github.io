@@ -4,7 +4,7 @@ button{
     font-weight:600;
 
     background-color:transparent;
-    border:2px solid rebeccapurple;
+    border:2px solid #fff;
     border-radius:3px;
 
     transition:all 0.5s;
@@ -13,6 +13,10 @@ button{
         color:#fff;
     }
     &:hover{
-        background-color:rebeccapurple;
+        background-color:#fff;
+        border:none;
+        a{
+            color:#262626;
+        }
     }
 }

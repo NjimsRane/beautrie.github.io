@@ -34,7 +34,7 @@ button {
   padding: 0.3em 1em;
   font-weight: 600;
   background-color: transparent;
-  border: 2px solid rebeccapurple;
+  border: 2px solid #fff;
   border-radius: 3px;
   transition: all 0.5s;
   cursor: pointer;
@@ -43,7 +43,11 @@ button a {
   color: #fff;
 }
 button:hover {
-  background-color: rebeccapurple;
+  background-color: #fff;
+  border: none;
+}
+button:hover a {
+  color: #262626;
 }
 
 .nav-bar {
@@ -58,7 +62,7 @@ button:hover {
   font-weight: 700;
 }
 .nav-bar .logo span {
-  color: rebeccapurple;
+  color: #262626;
 }
 .nav-bar .menu-links {
   display: flex;
@@ -71,27 +75,13 @@ button:hover {
   text-transform: capitalize;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s linear;
+}
+.nav-bar .menu-links li:hover {
+  transform: scale(1.4);
 }
 .nav-bar .menu-links li a {
   color: #fff;
-  border-radius: 3px;
-  position: relative;
-}
-.nav-bar .menu-links li a::after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0.2em;
-  left: 0;
-  top: 1.2em;
-  background-color: rebeccapurple;
-  transition: all 0.5s;
-}
-.nav-bar .menu-links li a:hover::after {
-  width: 100%;
-}
-.nav-bar .menu-links li a.active::after {
-  width: 100%;
 }
 .nav-bar .btns-links {
   display: flex;
@@ -100,36 +90,37 @@ button:hover {
 
 header {
   background-color: rgb(83, 136, 155);
-  min-height: 100vh;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
 }
-
-.hero {
-  height: calc(100vh - 60px);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row-reverse;
-}
-.hero .hero-image {
-  flex-grow: 1;
-}
-.hero .hero-image img {
-  height: 530px;
-}
-.hero .hero-text {
-  flex-grow: 1;
+header .hero-text {
+  margin-top: calc((100vh - 29px) / 2);
   color: #fff;
   line-height: 1.3;
 }
-.hero .hero-text h4 {
+header .hero-text h4 {
   font-size: 2rem;
 }
-.hero .hero-text h2 {
+header .hero-text h2 {
   font-size: 4rem;
 }
-.hero .hero-text p {
+header .hero-text p {
   font-size: 3rem;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: url("/Images/imgs/ebonynBG.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .offer-section {
@@ -150,7 +141,7 @@ header {
 }
 .offer-section .wrapper .panel {
   position: relative;
-  height: 40vh;
+  height: 100vh;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -164,7 +155,7 @@ header {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: brightness(0.6);
+  filter: brightness(0.5);
 }
 .offer-section .wrapper .panel .panel-text {
   position: absolute;
@@ -212,8 +203,13 @@ header {
   color: #D2D4D5;
   text-align: justify;
 }
-.about-section .wrapper-area img {
+.about-section .wrapper-area .image-area {
+  height: 70vh;
+}
+.about-section .wrapper-area .image-area img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 3px;
 }
 .about-section .wrapper-area button {

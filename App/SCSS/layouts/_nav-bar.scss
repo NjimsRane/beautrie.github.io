@@ -11,7 +11,7 @@
         font-weight:700;
         
         span{
-            color:rebeccapurple;
+            color: #262626;;
         }
     }
     
@@ -27,30 +27,14 @@
             text-transform:capitalize;
             font-weight:600;
             cursor: pointer;
+            transition:all 0.3s linear;
+
+            &:hover{
+                transform:scale(1.4);
+            }
 
             a{
-                color:#fff;
-                border-radius:3px;
-                position: relative;
-                
-                &::after{
-                    position:absolute;
-                    content:"";
-                    width:0;
-                    height:0.2em;
-                    left:0;
-                    top:1.2em;
-                    
-                    background-color:rebeccapurple;
-                    transition:all 0.5s;
-                }
-
-                &:hover::after{
-                    width:100%;
-                }
-                &.active::after{
-                    width:100%;
-                }
+               color:#fff;
             }
            
         }
