@@ -1,11 +1,12 @@
 .offer-section{
-    margin-block:2em;
-    background-color:#D2D4D5;
+    margin-block-start:2em;
+    background-color:#E3D7C8;
     
     h1{
         font-size:4em;
         text-align:center;
         margin-bottom:1em;
+        color:#9a9797;
     }
     .wrapper{
         display:grid;
@@ -65,9 +66,16 @@
 }
 
 .about-section{
-    margin-bottom:2em;
-    background-color:#547484;
     
+    background:linear-gradient(
+        to top,
+        #E3D7C8,
+        #AF977A
+    );
+    clip-path:polygon(100% 0,100% 13%,100% 92%,0% 100%,0 57%,0 0);
+    padding-block-end:1.5em;
+    
+
     .wrapper-area{
         width:100%;
        
@@ -84,16 +92,15 @@
         .text-area{
             font-size:1.5rem;
             line-height:1.5;
-            h3{
-                color:#fff;
-            }
+            color:#fbfafa;
+            
             p{
-                color:#D2D4D5;
+                
                 text-align:justify;
             }
         }
         .image-area{
-            height:70vh;
+            height:45vh;
 
             img{
                 width:100%;
@@ -121,4 +128,50 @@
             grid-area:why-us-image;
         }
     }
+}
+.products-section{
+    margin-bottom:2em;
+    background-color:#AF977A;
+    height:100vh;
+    clip-path:polygon(100% 0,100% 15%, 100% 100%, 0 100%,0 57%,0 9%);
+    h2{
+        text-align:center;
+        font-size:2rem;
+        color:#fbfafa;
+        margin-block:1em;
+    }
+    
+    .panel-products{
+        display:grid;
+        grid-template-columns:auto auto auto;
+        row-gap:5em;
+        .products-container{
+            height:20em;
+            width:34em;
+            display:flex;
+            flex-direction:column;
+            
+            .products-container-image{
+                width:100%;
+                height:100%;
+                object-fit:cover;
+                border-radius:3px 3px 0 0;
+            }
+            .products-container-info{
+                background-color:#E3D7C8;
+                padding:0.5em;
+                border-radius:0 0 3px 3px;
+
+                .products-name{
+                    font-size:1.4rem;
+                }
+                .products-price{
+                    font-size:1.3rem;
+                    font-weight:600;
+                    color:#999;
+                }
+            }
+        }
+    }
+    
 }

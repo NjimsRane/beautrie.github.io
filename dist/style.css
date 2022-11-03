@@ -24,7 +24,7 @@ a {
 }
 
 .container {
-  padding: 2em 6em;
+  padding: 2em 10em;
   width: 100%;
   position: relative;
 }
@@ -41,13 +41,14 @@ button {
 }
 button a {
   color: #fff;
+  transition: all 0.5s;
 }
 button:hover {
   background-color: #fff;
   border: none;
 }
 button:hover a {
-  color: #262626;
+  color: #252525;
 }
 
 .nav-bar {
@@ -89,7 +90,7 @@ button:hover a {
 }
 
 header {
-  background-color: rgb(83, 136, 155);
+  background-color: #AF977A;
   height: 100vh;
   position: relative;
   z-index: 1;
@@ -124,13 +125,14 @@ header::after {
 }
 
 .offer-section {
-  margin-block: 2em;
-  background-color: #D2D4D5;
+  margin-block-start: 2em;
+  background-color: #E3D7C8;
 }
 .offer-section h1 {
   font-size: 4em;
   text-align: center;
   margin-bottom: 1em;
+  color: #9a9797;
 }
 .offer-section .wrapper {
   display: grid;
@@ -181,8 +183,9 @@ header::after {
 }
 
 .about-section {
-  margin-bottom: 2em;
-  background-color: #547484;
+  background: linear-gradient(to top, #E3D7C8, #AF977A);
+  clip-path: polygon(100% 0, 100% 13%, 100% 92%, 0% 100%, 0 57%, 0 0);
+  padding-block-end: 1.5em;
 }
 .about-section .wrapper-area {
   width: 100%;
@@ -195,16 +198,13 @@ header::after {
 .about-section .wrapper-area .text-area {
   font-size: 1.5rem;
   line-height: 1.5;
-}
-.about-section .wrapper-area .text-area h3 {
-  color: #fff;
+  color: #fbfafa;
 }
 .about-section .wrapper-area .text-area p {
-  color: #D2D4D5;
   text-align: justify;
 }
 .about-section .wrapper-area .image-area {
-  height: 70vh;
+  height: 45vh;
 }
 .about-section .wrapper-area .image-area img {
   width: 100%;
@@ -226,6 +226,49 @@ header::after {
 }
 .about-section .wrapper-area .why-us-image {
   grid-area: why-us-image;
+}
+
+.products-section {
+  margin-bottom: 2em;
+  background-color: #AF977A;
+  height: 100vh;
+  clip-path: polygon(100% 0, 100% 15%, 100% 100%, 0 100%, 0 57%, 0 9%);
+}
+.products-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fbfafa;
+  margin-block: 1em;
+}
+.products-section .panel-products {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 5em;
+}
+.products-section .panel-products .products-container {
+  height: 20em;
+  width: 34em;
+  display: flex;
+  flex-direction: column;
+}
+.products-section .panel-products .products-container .products-container-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px 3px 0 0;
+}
+.products-section .panel-products .products-container .products-container-info {
+  background-color: #E3D7C8;
+  padding: 0.5em;
+  border-radius: 0 0 3px 3px;
+}
+.products-section .panel-products .products-container .products-container-info .products-name {
+  font-size: 1.4rem;
+}
+.products-section .panel-products .products-container .products-container-info .products-price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #999;
 }
 
 footer {

@@ -11,12 +11,13 @@ button{
     cursor: pointer;
     a{
         color:#fff;
+        transition:all 0.5s ;
     }
     &:hover{
         background-color:#fff;
         border:none;
         a{
-            color:#262626;
+            color: #252525;;
         }
     }
 }
