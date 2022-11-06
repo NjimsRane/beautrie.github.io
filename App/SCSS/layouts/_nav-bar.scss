@@ -8,10 +8,10 @@
     .logo{
         font-size:2rem;
         color:#fff;
-        font-weight:700;
+        font-weight:900;
         
         span{
-            color: #262626;;
+            color: #AF977A;
         }
     }
     
@@ -42,5 +42,8 @@
     .btns-links{
         display:flex;
         gap:1em;
+    }
+    .hamburger-menu{
+        display:none;
     }
 }

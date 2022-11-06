@@ -31,26 +31,97 @@ a {
 
 button {
   font-size: 1.4rem;
-  padding: 0.3em 1em;
+  padding: 0.5em 1em;
   font-weight: 600;
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 2px solid #AF977A;
   border-radius: 3px;
-  transition: all 0.5s;
   cursor: pointer;
+  transition: all 0.5s;
 }
 button a {
   color: #fff;
-  transition: all 0.5s;
 }
 button:hover {
-  background-color: #fff;
-  border: none;
+  background-color: #AF977A;
+  border: 2px solid #fff;
 }
 button:hover a {
-  color: #252525;
+  color: #fff;
 }
 
+@media screen and (max-width: 1000px) {
+  .container {
+    padding-inline: 6em;
+  }
+}
+@media screen and (max-width: 850px) {
+  .container {
+    padding-inline: 4em;
+  }
+  header .nav-bar .menu-links {
+    position: absolute;
+    flex-direction: column;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 80%;
+    z-index: 9999;
+    justify-content: space-evenly;
+  }
+  header .nav-bar .menu-links li a {
+    color: #262626;
+  }
+  header .nav-bar .btns-links {
+    display: none;
+  }
+  header .nav-bar .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+  header .nav-bar .hamburger-menu .hamburger {
+    width: 3em;
+    height: 0.3em;
+    background-color: white;
+    border-radius: 20px;
+    transition: all 0.5s;
+  }
+  header .nav-bar .hamburger-menu .hamburger:not(:last-child) {
+    margin-bottom: 0.3em;
+  }
+  header .nav-bar .hamburger-menu .hamburger:nth-child(2) {
+    width: 1.5em;
+    transform: translateX(0.75em);
+    background-color: #AF977A;
+  }
+  header .nav-bar .hamburger-menu-display .hamburger:nth-child(2) {
+    width: 0;
+  }
+  header .nav-bar .hamburger-menu-display .hamburger:nth-child(1) {
+    transform: translateY(0.6em) rotate(45deg);
+  }
+  header .nav-bar .hamburger-menu-display .hamburger:nth-child(3) {
+    transform: translateY(-0.6em) rotate(-45deg);
+    transition-delay: 0.3s;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    padding-inline: 2em;
+  }
+  .hero .hero-text h2 {
+    font-size: 3rem;
+    margin-block: 0.3em;
+  }
+  .hero .hero-text button {
+    margin-top: 1em;
+    padding: 0.5em;
+  }
+  .hero .hero-text button a {
+    font-size: 2rem;
+  }
+}
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -60,10 +131,10 @@ button:hover a {
 .nav-bar .logo {
   font-size: 2rem;
   color: #fff;
-  font-weight: 700;
+  font-weight: 900;
 }
 .nav-bar .logo span {
-  color: #262626;
+  color: #AF977A;
 }
 .nav-bar .menu-links {
   display: flex;
@@ -88,6 +159,9 @@ button:hover a {
   display: flex;
   gap: 1em;
 }
+.nav-bar .hamburger-menu {
+  display: none;
+}
 
 header {
   background-color: #AF977A;
@@ -95,19 +169,28 @@ header {
   position: relative;
   z-index: 1;
 }
-header .hero-text {
-  margin-top: calc((100vh - 29px) / 2);
+header .hero {
+  height: calc(100vh - 50px);
+  position: relative;
   color: #fff;
-  line-height: 1.3;
 }
-header .hero-text h4 {
+header .hero .hero-text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header .hero h2 {
+  font-size: 4rem;
+  margin-block: 0.2em;
+}
+header .hero h4 {
   font-size: 2rem;
 }
-header .hero-text h2 {
-  font-size: 4rem;
-}
-header .hero-text p {
+header .hero p {
   font-size: 3rem;
+  margin-bottom: 1em;
 }
 
 header::after {
@@ -118,7 +201,7 @@ header::after {
   height: 100%;
   width: 100%;
   z-index: -1;
-  background-image: url("/Images/imgs/ebonynBG.png");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/Images/imgs/ebonynBG.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
