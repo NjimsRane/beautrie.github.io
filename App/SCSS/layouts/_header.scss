@@ -1,49 +1,53 @@
 header{
-   background-color:#AF977A;
-   height:100vh;
-   position: relative;
-   z-index:1;
-    
-   .hero{
-    height:calc(100vh - 50px);
     position: relative;
-    color:#fff;
-    .hero-text{
-            position: absolute;
-            width:100%;
-            top:50%;
-            left:50%;
-            transform:translate(-50%,-50%);
-        }
-        h2{
-            font-size:4rem;
-            margin-block:0.2em;
-        }
-        h4{
-            font-size:2rem;
-        }
-        p{
-            font-size:3rem;
-            margin-bottom:1em;
-        }
-    }
+    min-height:100vh;
+    background-color:var(--primary-color);
+    z-index:1;
 }
-
+/***************/ 
 header::after{
+    position: absolute;
     content:"";
-    position:absolute;
-    top:0;
-    right:0;
     height:100%;
     width:100%;
-    z-index:-1;
-
-    background-image:linear-gradient(0deg,
-        rgba(0,0,0,0.6),
-        rgba(0,0,0,0.6)
-    ),
-    url('/Images/imgs/ebonynBG.png');
-    background-position:center;
+    top:0;
+    left:0;
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url('/Images/imgs/ebonyBG.png');
     background-repeat:no-repeat;
+    background-position:center center;
     background-size:cover;
+    z-index:-1;
+}
+/***************/ 
+.hero{
+    position: absolute;
+    height:calc(100vh - 4em);
+    width:calc(100% - 4em);
+   
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    .hero-text{
+        color:var(--txt-color1);
+        p,h5{
+            font-size:2rem;
+        }
+        h2{
+            font-size:3.5rem;
+            line-height:1.5;
+        }
+    }
+
+    .hero-link{
+        margin-top:1em;
+    }
+    transition:var(--transition);
+}
+.hero-blur{
+    filter:blur(10px);
 }

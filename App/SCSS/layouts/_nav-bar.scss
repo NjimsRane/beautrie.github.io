@@ -2,48 +2,81 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    width:100%;
-   
+/***************/ 
     .logo{
         font-size:2rem;
-        color:#fff;
-        font-weight:900;
-        
+        color:var(--txt-color1);
+        font-weight:700;
         span{
-            color: #AF977A;
+            color:var(--primary-color);
         }
     }
-    
-    .menu-links{
-        display:flex;
-        justify-content:center;
-        align-items:center;
+/***************/ 
+    .nav-links{
+        position:absolute;
+        top:4.5em;
+        width:calc(100% - 4em);
+
+        background:rgba(255,255,255,0.2);
+        box-shadow:0 6px 12px 0 rgba(0,0,0,0.5);
+        border-radius:3px;
+       
         
-        gap:5em;
+        text-align:center;
+        padding-block-end:1em;
+        z-index:10;
+        .menu-links{
+            
+            li{
+                font-size:2rem;
+                padding-block:1.4em;
+                border-bottom:1px solid var(--secondary-color);
+                text-transform: capitalize;
 
-        li{
-            font-size:1.4rem;
-            text-transform:capitalize;
-            font-weight:600;
-            cursor: pointer;
-            transition:all 0.3s linear;
-
-            &:hover{
-                transform:scale(1.4);
+                a{
+                    color:var(--txt-color2);
+                }
             }
+            margin-bottom:2em;
+        }
+        transition:var(--transition);
+        transform:translateX(-120%);
+    }
 
-            a{
-               color:#fff;
+    .nav-links-show{
+        transform:translateX(0);
+    }
+/***************/ 
+    .hamburger-menu{
+        cursor: pointer;
+        .hamburger{
+            width:3em;
+            height:0.3em;
+            background-color:var(--txt-color1);
+            border-radius:20px;
+            transition:var(--transition);
+
+            &:not(:last-child){
+                margin-bottom:0.3em;
             }
-           
+            &:nth-child(2){
+                width:1.5em;
+                background-color:var(--primary-color);
+                transform:translateX(0.75em);
+            }
         }
     }
-    .btns-links{
-        display:flex;
-        gap:1em;
-    }
-    .hamburger-menu{
-        display:none;
+    .hamburger-menu-show{
+        .hamburger{
+            &:nth-child(2){
+                width:0;
+            }
+            &:nth-child(1){
+                transform:translateY(0.6em)rotate(45deg);
+            }
+            &:nth-child(3){
+                transform:translateY(-0.6em)rotate(-45deg);
+            }
+        }
     }
 }
