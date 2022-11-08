@@ -182,17 +182,19 @@ header::after {
 
 main {
   margin-block: 1em;
-  padding-block: 1em;
-  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color), var(--primary-color));
   /* ************ */
   /* ************ */
 }
-main .offer-section h2 {
+main h2 {
   text-align: center;
   font-size: 3rem;
   color: var(--txt-color2);
   text-transform: capitalize;
   font-weight: 900;
+}
+main .offer-section {
+  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color), var(--primary-color));
+  padding-block: 1em;
 }
 main .offer-section .wrapper-offer-section {
   display: flex;
@@ -230,4 +232,8 @@ main .offer-section .panel .panel-text {
 }
 main .offer-section .panel .panel-text span {
   color: gold;
+}
+main .about-section {
+  margin-block: 1.5em;
+  background-color: var(--primary-color);
 }/*# sourceMappingURL=style.css.map */
