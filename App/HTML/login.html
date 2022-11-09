@@ -17,18 +17,44 @@
                     <a href="/App/HTML/index.html" class="logo">Beaut<span>ries</span></a>
                 </nav>
 
-                <form action="#">
-                    <h2>Login</h2>
-                    
-                </form>
+               <div class="hero">
+                    <div class="box">
+                        <h2>Login</h2>
+                        <form action="#">
+                            <div class="input-field">
+                                <label aria-label="username">
+                                    <input type="text" name="username" id="user-name" required>
+                                    <span>Username</span>
+                                    <i></i>
+                                </label>
+                            </div>
+                            <div class="input-field">
+                                <label aria-label="password">
+                                    <input type="password" name="password"  id="password"  required>
+                                    <button type="button" class="btn-pass">
+                                        <img src="/Images/pass/show.png" class="img-hide-show" alt="password eye">
+                                    </button>
+                                    <span>Password</span>
+                                    <i></i>
+                                </label>
+                            </div>
+                            <div class="links">
+                                <a href="#" target="_blank" rel="noopener" >forgot password?</a>
+                                <a href="#">
+                                signup
+                                </a>
+                            </div>
+                            <button type="submit" class="btn-submit">Login</button>
+                            
+                        </form>
+                    </div>
+                </div>
             </div>
         </header>
         <!-- header -->
-        <!-- footer start -->
-       
-        <!-- footer end -->
+    
 
         <!-- script -->
-        <script src="/App/JS/script.js"></script>
+      <script src="/App/JS/login-signup.js"></script>
     </body>
 </html>

@@ -4,6 +4,8 @@
   --txt-color1:#D2D4D5;
   --txt-color2:#fbfafa;
   --transition:all 0.5s;
+  --glasmorphism:rgba(255,255,255,0.1);
+  --shadow:0 6px 12px 0 rgba(0,0,0,0.5);
 }
 
 html {
@@ -78,8 +80,8 @@ button:hover {
   position: absolute;
   top: 4.5em;
   width: calc(100% - 4em);
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.5);
+  background: var(--glasmorphism);
+  box-shadow: var(--shadow);
   border-radius: 3px;
   text-align: center;
   padding-block-end: 1em;
@@ -236,4 +238,106 @@ main .offer-section .panel .panel-text span {
 main .about-section {
   margin-block: 1.5em;
   background-color: var(--primary-color);
+}
+
+.hero {
+  align-items: center;
+  /***************/
+}
+.hero .box {
+  box-shadow: var(--shadow);
+  background: var(--glasmorphism);
+  padding: 2em 1rem;
+  width: 34em;
+  max-width: 100%;
+  border-radius: 4px;
+}
+.hero .box h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2em;
+}
+.hero .box form {
+  display: flex;
+  flex-direction: column;
+  /***************/
+  /***************/
+  /***************/
+}
+.hero .box form .input-field {
+  position: relative;
+  width: 90%;
+  margin: 0 auto 3em auto;
+  z-index: 1;
+}
+.hero .box form .input-field input {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  margin-inline: auto;
+}
+.hero .box form .input-field span {
+  position: absolute;
+  padding: 0.5em 0;
+  pointer-events: none;
+  left: 0;
+  font-size: 1.6rem;
+  color: var(--txt-color1);
+  transition: var(--transition);
+}
+.hero .box form .input-field i {
+  position: absolute;
+  width: 100%;
+  height: 0.2em;
+  left: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  z-index: -1;
+  transition: var(--transition);
+  border-radius: 3px;
+}
+.hero .box form .input-field input:valid ~ i, .hero .box form .input-field input:focus ~ i {
+  height: 3em;
+  background-color: var(--txt-color2);
+}
+.hero .box form .input-field .btn-pass {
+  position: absolute;
+  right: 1em;
+  width: 2em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+}
+.hero .box form .input-field .btn-pass img {
+  width: 100%;
+}
+.hero .box form .input-field input:valid ~ span, .hero .box form .input-field input:focus ~ span {
+  transform: translateY(-2em);
+  font-size: 1rem;
+}
+.hero .box form .links {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-inline: auto;
+}
+.hero .box form .links a {
+  color: var(--txt-color2);
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  transition: var(--transition);
+}
+.hero .box form .links a:hover, .hero .box form .links a:nth-child(2) {
+  color: var(--primary-color);
+  font-weight: 600;
+  transform: scale(1.2);
+}
+.hero .box form .btn-submit {
+  margin: 2em 0 0 1em;
+  width: 20%;
 }/*# sourceMappingURL=style.css.map */

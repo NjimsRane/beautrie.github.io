@@ -1,0 +1,116 @@
+.hero{
+    // had hero already from the header
+   align-items:center;
+/***************/ 
+    .box{
+        box-shadow:var(--shadow);
+        background:var(--glasmorphism);
+        padding: 2em 1rem;
+        width:34em;
+        max-width:100%;
+        border-radius:4px;
+
+        h2{
+            text-align:center;
+            font-size:2rem;
+            color:var(--primary-color);
+            margin-bottom:2em;
+        }
+        form{
+            display:flex;
+            flex-direction:column;
+            /***************/ 
+            .input-field{
+                position: relative;
+                width:90%;
+                margin:0 auto 3em auto;
+                z-index:1;
+
+                input{
+                    position:relative;
+                    width:100%;
+                    background:transparent;
+                    border:none;
+                    outline:none;
+                    padding:0.5em;
+                    margin-inline:auto;
+                }
+                span{
+                    position:absolute;
+                    padding:0.5em 0;
+                    pointer-events:none;
+                    left:0;
+                    font-size:1.6rem;
+                    color:var(--txt-color1);
+                    transition:var(--transition);
+                }
+
+                i{
+                    position:absolute;
+                    width:100%;
+                    height:0.2em;
+                    left:0;
+                    bottom:0;
+                    
+                    background-color:var(--primary-color);
+                    z-index:-1;
+                    transition:var(--transition);
+                    border-radius:3px;
+                    
+                }
+
+                & input:valid~i,
+                & input:focus~i
+                    {
+                        height:3em;
+                        background-color:var(--txt-color2);
+                    } 
+                .btn-pass{
+                    position:absolute;
+                    right:1em;
+                    width:2em;
+                    border:none;
+                    outline:none;
+                    cursor: pointer;
+                    background:transparent;
+                    img{
+                        width:100%;
+                    }
+                }
+                & input:valid ~span,
+                & input:focus ~span
+                    {
+                        transform:translateY(-2em);
+                        font-size:1rem;
+                    }
+            }
+            /***************/ 
+            .links{
+                display:flex;
+                justify-content:space-between;
+                width:90%;
+                margin-inline:auto;
+
+                a{
+                    color:var(--txt-color2);
+                    font-size:1.2rem;
+                    text-transform: capitalize;
+                    transition:var(--transition);
+                    
+
+                    &:hover,
+                    &:nth-child(2){
+                        color:var(--primary-color);
+                        font-weight:600;
+                        transform:scale(1.2);
+                    }
+                }
+            }
+            /***************/ 
+            .btn-submit{
+                margin:2em 0 0 1em;
+                width:20%;
+            }
+        }
+    }
+}

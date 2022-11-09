@@ -17,11 +17,10 @@
         top:4.5em;
         width:calc(100% - 4em);
 
-        background:rgba(255,255,255,0.2);
-        box-shadow:0 6px 12px 0 rgba(0,0,0,0.5);
+        background:var(--glasmorphism);
+        box-shadow:var(--shadow);
         border-radius:3px;
        
-        
         text-align:center;
         padding-block-end:1em;
         z-index:10;
