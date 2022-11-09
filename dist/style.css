@@ -240,11 +240,11 @@ main .about-section {
   background-color: var(--primary-color);
 }
 
-.hero {
+.hero-login {
   align-items: center;
   /***************/
 }
-.hero .box {
+.hero-login .box {
   box-shadow: var(--shadow);
   background: var(--glasmorphism);
   padding: 2em 1rem;
@@ -252,26 +252,43 @@ main .about-section {
   max-width: 100%;
   border-radius: 4px;
 }
-.hero .box h2 {
+.hero-login .box h2 {
   text-align: center;
   font-size: 2rem;
   color: var(--primary-color);
-  margin-bottom: 2em;
 }
-.hero .box form {
+.hero-login .box .links-to-singin {
+  display: flex;
+  gap: 1em;
+  margin-block: 1em 2em;
+  justify-content: center;
+}
+.hero-login .box .links-to-singin .btn-links {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  border: 1px solid #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-login .box .links-to-singin img {
+  width: 1em;
+}
+.hero-login .box form {
   display: flex;
   flex-direction: column;
   /***************/
   /***************/
   /***************/
 }
-.hero .box form .input-field {
+.hero-login .box form .input-field {
   position: relative;
   width: 90%;
   margin: 0 auto 3em auto;
   z-index: 1;
 }
-.hero .box form .input-field input {
+.hero-login .box form .input-field input {
   position: relative;
   width: 100%;
   background: transparent;
@@ -280,7 +297,7 @@ main .about-section {
   padding: 0.5em;
   margin-inline: auto;
 }
-.hero .box form .input-field span {
+.hero-login .box form .input-field span {
   position: absolute;
   padding: 0.5em 0;
   pointer-events: none;
@@ -289,7 +306,7 @@ main .about-section {
   color: var(--txt-color1);
   transition: var(--transition);
 }
-.hero .box form .input-field i {
+.hero-login .box form .input-field i {
   position: absolute;
   width: 100%;
   height: 0.2em;
@@ -300,11 +317,11 @@ main .about-section {
   transition: var(--transition);
   border-radius: 3px;
 }
-.hero .box form .input-field input:valid ~ i, .hero .box form .input-field input:focus ~ i {
+.hero-login .box form .input-field input:valid ~ i, .hero-login .box form .input-field input:focus ~ i {
   height: 3em;
   background-color: var(--txt-color2);
 }
-.hero .box form .input-field .btn-pass {
+.hero-login .box form .input-field .btn-pass {
   position: absolute;
   right: 1em;
   width: 2em;
@@ -313,31 +330,51 @@ main .about-section {
   cursor: pointer;
   background: transparent;
 }
-.hero .box form .input-field .btn-pass img {
+.hero-login .box form .input-field .btn-pass img {
   width: 100%;
 }
-.hero .box form .input-field input:valid ~ span, .hero .box form .input-field input:focus ~ span {
+.hero-login .box form .input-field input:valid ~ span, .hero-login .box form .input-field input:focus ~ span {
   transform: translateY(-2em);
   font-size: 1rem;
 }
-.hero .box form .links {
+.hero-login .box form .links {
   display: flex;
   justify-content: space-between;
   width: 90%;
   margin-inline: auto;
 }
-.hero .box form .links a {
+.hero-login .box form .links a {
   color: var(--txt-color2);
   font-size: 1.2rem;
   text-transform: capitalize;
   transition: var(--transition);
 }
-.hero .box form .links a:hover, .hero .box form .links a:nth-child(2) {
+.hero-login .box form .links a:hover, .hero-login .box form .links a:nth-child(2) {
   color: var(--primary-color);
   font-weight: 600;
   transform: scale(1.2);
 }
-.hero .box form .btn-submit {
+.hero-login .box form .btn-submit {
   margin: 2em 0 0 1em;
-  width: 20%;
+  width: 30%;
+}
+
+.signup-btn {
+  margin: 0 0 1em 1.5em;
+}
+.signup-btn .btn-signup {
+  width: 95%;
+}
+
+.link-to-login {
+  text-align: center;
+  color: var(--txt-color1);
+}
+.link-to-login p {
+  font-size: 1.4rem;
+}
+.link-to-login p a {
+  color: var(--primary-color);
+  font-weight: 800;
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */

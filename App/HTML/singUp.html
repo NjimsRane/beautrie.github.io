@@ -1,57 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="NjimsRane">
+        <title>Beautries</title>
+        <!-- links -->
+        <link rel="stylesheet" href="/dist/style.css">
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <div class="container">
+                <nav class="nav-bar">
+                    <a href="/App/HTML/index.html" class="logo">Beaut<span>ries</span></a>
+                </nav>
 
-     <!-- footer start -->
-     <footer>
-        <div class="container">
-            <section>
-                <div class="social-media-links">
-                    
-                    <h2>Beautries</h2>
-                    <div class="social-media-logo">
-                        <a href="#" target="_blank"> <img src="/Images/Social-media/facebook.png" alt="facebook"></a>
-                        <a href="#" target="_blank"> <img src="/Images/Social-media/twitter.png" alt="twitter"></a>
-                        <a href="#" target="_blank"> <img src="/Images/Social-media/instagram.png" alt="instagram"></a>
+            <div class="hero hero-login">
+                    <div class="box">
+                        <h2>Create an account</h2>
+                        <div class="links-to-singin">
+                            <a href="https://www.facebook.com" target="_blank" rel='noopener noreferrer'>
+                                <button class="btn-links">
+                                    <img src="/Images/Social-media/facebook.png" alt="facebook logo">
+                                </button>
+                            </a>
+                            <a href="https://www.google.com" target="_blank" rel='noopener noreferrer'>
+                                <button class="btn-links">
+                                    <img src="/Images/Social-media/gmail.png" alt="gmail logo">
+                                </button>
+                            </a>
+                            <a href="https://www.instagram.com" target="_blank" rel='noopener noreferrer'>
+                                <button class="btn-links">
+                                    <img src="/Images/Social-media/instagram.png" alt="instagram logo">
+                                </button>
+                            </a>
+                        </div>
+                        <form action="#">
+                            <div class="input-field">
+                                <label aria-label="username">
+                                    <input type="text" name="username" id="user-name" required>
+                                    <span>Name</span>
+                                    <i></i>
+                                </label>
+                            </div>
+                            <div class="input-field">
+                                <label aria-label="usermail">
+                                    <input type="email" name="useremail" id="user-email" required>
+                                    <span>Email</span>
+                                    <i></i>
+                                </label>
+                            </div>
+                            <div class="input-field">
+                                <label aria-label="password">
+                                    <input type="password" name="password"  id="password"  required>
+                                    <button type="button" class="btn-pass">
+                                        <img src="/Images/pass/show.png" class="img-hide-show" alt="password eye">
+                                    </button>
+                                    <span>Password</span>
+                                    <i></i>
+                                </label>
+                            </div>
+                            <div class="input-field">
+                                <label aria-label="verify password">
+                                    <input type="password" name="verify-password"  id="verify-password"  required>
+                                    <button type="button" class="btn-pass">
+                                        <img src="/Images/pass/show.png" class="img-hide-show" alt="password eye">
+                                    </button>
+                                    <span>Verify Password</span>
+                                    <i></i>
+                                </label>
+                            </div>
+                            <div class="signup-btn">
+                                <button class="btn-signup">SIGN UP</button>
+                            </div>
+                            <div class="link-to-login">
+                                <p>Existing user, sign in <a href="/App/HTML/login.html">here</a></p>
+                            </div>
+                        </form>
                     </div>
-                   
-                    <div class="copy-right-section">
-                        <p>Made with love by NjimsRane.&copy;Copyright <span class="set-date"></span></p>
-                    </div>
                 </div>
-                <div class="shop links">
-                    <h3>Shop now</h3>
-                    <ul>
-                        <li><a href="#">cosmestics</a></li>
-                        <li><a href="#">cosmestics</a></li>
-                        <li><a href="#">make-up</a></li>
-                    </ul>
-                </div>
-                <div class="nichs links">
-                    <h3>Niche</h3>
-                    <ul>
-                        <li><a href="#">Sun care</a></li>
-                        <li><a href="#">eye care</a></li>
-                        <li><a href="#">hair dressing</a></li>
-                    </ul>
-                </div>
-                <div class="contact links">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li><a href="tel:+2235455554">Call us</a></li>
-                        <li><a href="mailto:njims2011@gmail.com">Email us</a></li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-     </footer>
-    <!-- footer end -->
-</body>
+            </div>
+        </header>
+        <!-- header -->
+
+        <!-- script -->
+      <script src="/App/JS/signup.js"></script>
+    </body>
 </html>
