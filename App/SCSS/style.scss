@@ -1,7 +1,9 @@
 @forward  'abstracts/variables';
 
 @forward 'base/base';
+
 @forward 'components/button';
+@forward 'components/media-query';
 
 @forward 'layouts/nav-bar';
 @forward 'layouts/header';
