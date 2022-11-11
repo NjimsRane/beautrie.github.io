@@ -1,13 +1,13 @@
-@forward  'abstracts/variables';
+@import  'abstracts/variables';
+@import  'abstracts/mixins' ;
 
-@forward 'base/base';
+@import 'base/reset';
 
-@forward 'components/button';
-@forward 'components/media-query';
+@import 'layout/nav-bar';
+@import 'layout/header';
+@import 'layout/main';
 
-@forward 'layouts/nav-bar';
-@forward 'layouts/header';
-@forward 'layouts/main';
+@import 'components/button';
 
-@forward 'pages/login';
-@forward 'pages/signup';
+@import 'pages/login';
+@import 'pages/signup';

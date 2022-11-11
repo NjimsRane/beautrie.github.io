@@ -25,4 +25,12 @@ a{
 /***************/ 
 .container{
     padding:2em;
+
+    @include for-tablet-portrait-up {
+        padding-inline:4em;
+    }
+
+    @include for-tablet-landscape-up{
+        padding-inline:6em;
+    }
 }

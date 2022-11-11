@@ -24,8 +24,32 @@
         text-align:center;
         padding-block-end:1em;
         z-index:10;
+/***********************************/
+        @include for-tablet-landscape-up {
+            position:unset;
+            transform:translateX(0);
+            background:transparent;
+            box-shadow:unset;
+            height:auto;
+            top:unset;
+            padding-block-end:unset;
+             
+            display:flex;
+            align-items:center;
+            justify-content:space-between;    
+        } 
+
         .menu-links{
-            
+            margin-bottom:2em;
+
+            @include for-tablet-landscape-up{
+                flex-grow:1;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                gap:6em;
+                margin-bottom:unset;
+            }
             li{
                 font-size:2rem;
                 padding-block:1.4em;
@@ -33,11 +57,34 @@
                 text-transform: capitalize;
                 letter-spacing:2px;
 
+                @include for-tablet-landscape-up{
+                    border:none;
+                    padding-block:unset;
+                    font-size:1.4rem;
+                }
+
                 a{
                     color:var(--txt-color2);
+
+                    @include for-tablet-landscape-up{
+                        position: relative;
+                        &::after{
+                            content:"";
+                            position: absolute;
+                            width:0;
+                            height:0.2em;
+                            background-color:var(--primary-color);
+                            left:0;
+                            top:1.3em;
+                            transition:var(--transition);
+                        }
+                        &:hover::after,&:focus{
+                            width:100%;
+                        }
+                    }
                 }
             }
-            margin-bottom:2em;
+           
         }
         transition:var(--transition);
         transform:translateX(-120%);
@@ -64,6 +111,10 @@
                 background-color:var(--primary-color);
                 transform:translateX(0.75em);
             }
+        }
+
+        @include for-tablet-landscape-up{
+            display:none;
         }
     }
     .hamburger-menu-show{
