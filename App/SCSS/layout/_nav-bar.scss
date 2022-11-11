@@ -25,6 +25,9 @@
         padding-block-end:1em;
         z-index:10;
 /***********************************/
+        @include for-tablet-portrait-up{
+            width:calc(100% - 8em);
+        }
         @include for-tablet-landscape-up {
             position:unset;
             transform:translateX(0);
@@ -33,6 +36,7 @@
             height:auto;
             top:unset;
             padding-block-end:unset;
+          
              
             display:flex;
             align-items:center;

@@ -24,6 +24,29 @@ main{
            
             gap:0.5em;
             margin-block:2em;
+
+            @include for-tablet-landscape-up{
+                display:grid;
+                grid-template-columns:1fr 1fr 1fr;
+                grid-template-rows:1fr 1fr;
+                grid-template-areas:
+                    'panel1 panel1 panel4'
+                    'panel2 panel3 panel3'
+                ;
+
+                .panel:nth-child(1){
+                    grid-area:panel1;
+                }
+                .panel:nth-child(2){
+                    grid-area:panel2;
+                }
+                .panel:nth-child(3){
+                    grid-area:panel3;
+                }
+                .panel:nth-child(4){
+                    grid-area:panel4;
+                }
+            }
         }
         .panel{
             position: relative;
@@ -34,14 +57,18 @@ main{
             
             border-radius:5px;
             overflow:hidden;
-            box-shadow:0 5px 10px 0 rgba(0,0,0,0.5);
+            box-shadow:var(--shadow);
+
+            @include for-tablet-landscape-up{
+                height:40em;
+                max-width:100%;
+            }
             
             .panel-image{
                 position:absolute;
                 left:0;
                 top: 0;
                 width:100%;
-                // max-width:32e;
                 height:100%;
                 object-fit:cover;
 
@@ -69,9 +96,34 @@ main{
 
        .wrapper-about-section{
             width:100%;
-            display:grid;
-            grid-template-columns:1fr;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
             gap:2em;
+
+            @include for-tablet-landscape-up{
+                width:80%;
+                margin-inline:auto;
+                display:grid;
+                grid-template-columns:1fr 1fr;
+                grid-template-areas: 
+                    'text1 lady'
+                    'spray text2 '
+                ;
+
+                .text1{
+                    grid-area:text1;
+                }
+                .text2{
+                    grid-area:text2;
+                }
+                .lady{
+                    grid-area:lady;
+                }
+                .spray{
+                    grid-area:spray;
+                }
+            }
         }
 
         img{
