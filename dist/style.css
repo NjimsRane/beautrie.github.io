@@ -534,4 +534,8 @@ button:hover {
   color: var(--primary-color);
   font-weight: 800;
   text-decoration: underline;
+}
+
+form .match-password {
+  position: absolute;
 }/*# sourceMappingURL=style.css.map */
