@@ -258,39 +258,17 @@ main .offer-section .wrapper-offer-section {
   gap: 0.5em;
   margin-block: 2em;
 }
-@media screen and (min-width: 900px) {
-  main .offer-section .wrapper-offer-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "panel1 panel1 panel4" "panel2 panel3 panel3";
-  }
-  main .offer-section .wrapper-offer-section .panel:nth-child(1) {
-    grid-area: panel1;
-  }
-  main .offer-section .wrapper-offer-section .panel:nth-child(2) {
-    grid-area: panel2;
-  }
-  main .offer-section .wrapper-offer-section .panel:nth-child(3) {
-    grid-area: panel3;
-  }
-  main .offer-section .wrapper-offer-section .panel:nth-child(4) {
-    grid-area: panel4;
-  }
-}
 main .offer-section .panel {
   position: relative;
   width: 100%;
-  max-width: 30em;
-  height: 28em;
+  height: 26em;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: var(--shadow);
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 600px) {
   main .offer-section .panel {
-    height: 40em;
-    max-width: 100%;
+    height: 35em;
   }
 }
 main .offer-section .panel .panel-image {
@@ -330,9 +308,62 @@ main .about-section .wrapper-about-section {
   main .about-section .wrapper-about-section {
     width: 80%;
     margin-inline: auto;
+  }
+}
+main .about-section img {
+  width: 100%;
+  height: 20em;
+  object-fit: cover;
+  border-radius: 20px 0px 20px 0px;
+  box-shadow: var(--shadow);
+}
+@media screen and (min-width: 600px) {
+  main .about-section img {
+    height: 35em;
+  }
+}
+main .about-section p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-indent: 20px;
+}
+main .about-section p::first-letter {
+  font-size: 2rem;
+}
+
+main {
+  /* ************ */
+}
+@media screen and (min-width: 600px) {
+  main .offer-section .wrapper-offer-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "text1 lady" "spray text2 ";
+    grid-template-areas: "panel1 panel1" "panel2 panel3" "panel4 panel4";
+  }
+}
+@media screen and (min-width: 900px) {
+  main .offer-section .wrapper-offer-section {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "panel1 panel1 panel4" "panel2 panel3 panel3";
+  }
+}
+main .offer-section .wrapper-offer-section .panel:nth-child(1) {
+  grid-area: panel1;
+}
+main .offer-section .wrapper-offer-section .panel:nth-child(2) {
+  grid-area: panel2;
+}
+main .offer-section .wrapper-offer-section .panel:nth-child(3) {
+  grid-area: panel3;
+}
+main .offer-section .wrapper-offer-section .panel:nth-child(4) {
+  grid-area: panel4;
+}
+@media screen and (min-width: 900px) {
+  main .about-section .wrapper-about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "text1 lady" "spray text2";
   }
   main .about-section .wrapper-about-section .text1 {
     grid-area: text1;
@@ -346,22 +377,6 @@ main .about-section .wrapper-about-section {
   main .about-section .wrapper-about-section .spray {
     grid-area: spray;
   }
-}
-main .about-section img {
-  width: 100%;
-  width: 32em;
-  height: 28em;
-  object-fit: cover;
-  border-radius: 20px 0px 20px 0px;
-  box-shadow: var(--shadow);
-}
-main .about-section p {
-  font-size: 1.4rem;
-  line-height: 1.5;
-  text-indent: 20px;
-}
-main .about-section p::first-letter {
-  font-size: 2rem;
 }
 
 button {
