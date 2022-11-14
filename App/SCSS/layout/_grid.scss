@@ -32,7 +32,7 @@ main{
                 grid-area:panel4;
             }
         }
-    }
+    };
     
     /* ************ */ 
     .about-section{
@@ -59,6 +59,18 @@ main{
                 }
             }
         }
-    }
+    };
+
+    .products-section{
+        .boxes{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:0.5em;
+
+            @include for-tablet-portrait-up{
+                grid-template-columns:1fr 1fr 1fr;
+            }
+        }
+    };
 }
 

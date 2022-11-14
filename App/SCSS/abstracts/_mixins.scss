@@ -29,3 +29,12 @@
         @content;
     }
 }
+
+@mixin  flexbox1 {
+    display:flex;
+    justify-content:center;
+}
+@mixin  flexbox2 {
+    display:flex;
+    justify-content:space-between;
+}

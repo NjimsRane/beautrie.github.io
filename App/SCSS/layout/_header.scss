@@ -28,9 +28,8 @@ header::after{
     height:calc(100vh - 4em);
     width:calc(100% - 4em);
    
-    display:flex;
+   @include flexbox1;
     flex-direction:column;
-    justify-content:center;
 
     .hero-text{
         color:var(--txt-color1);

@@ -18,10 +18,10 @@
         }
 
         .links-to-singin{
-            display:flex;
+            @include flexbox1;
             gap:1em;
+            
             margin-block:1em 2em;
-            justify-content:center;
             .btn-links{
                 width:1.5em;
                 height:1.5em;
@@ -106,8 +106,7 @@
             }
             /***************/ 
             .links{
-                display:flex;
-                justify-content:space-between;
+                @include flexbox2;
                 width:90%;
                 margin-inline:auto;
 

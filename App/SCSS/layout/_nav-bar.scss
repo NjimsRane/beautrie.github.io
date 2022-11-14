@@ -1,6 +1,5 @@
 .nav-bar{
-    display:flex;
-    justify-content:space-between;
+    @include flexbox2;
     align-items:center;
 /***************/ 
     .logo{
@@ -38,9 +37,8 @@
             padding-block-end:unset;
           
              
-            display:flex;
+            @include flexbox2;    
             align-items:center;
-            justify-content:space-between;    
         } 
 
         .menu-links{
@@ -48,8 +46,8 @@
 
             @include for-tablet-landscape-up{
                 flex-grow:1;
-                display:flex;
-                justify-content:center;
+               
+               @include flexbox1;
                 align-items:center;
                 gap:6em;
                 margin-bottom:unset;
