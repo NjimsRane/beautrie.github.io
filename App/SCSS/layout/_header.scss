@@ -47,6 +47,8 @@ header::after{
     }
     transition:var(--transition);
 }
+
+
 .hero-blur{
     filter:blur(10px);
 }
