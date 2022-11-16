@@ -365,55 +365,88 @@ main .products-section .boxes .box .caracterias {
   padding: 0.2em 0.5em;
   height: auto;
 }
-
-.link-to-top {
-  position: fixed;
-  right: 2em;
-  bottom: 2em;
-  visibility: hidden;
-}
-.link-to-top .chevron {
+main .newsLetter-section .newsLetter {
   position: relative;
-  height: 3em;
-  width: 3em;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  animation: bounce 3s ease-in-out infinite;
+  width: 100%;
+  height: 30em;
 }
-.link-to-top .chevron::before, .link-to-top .chevron::after {
+@media screen and (min-width: 900px) {
+  main .newsLetter-section .newsLetter {
+    height: 40em;
+  }
+}
+main .newsLetter-section .newsLetter img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+main .newsLetter-section .newsLetter .subscribe {
   position: absolute;
-  content: "";
-  height: 3em;
-  width: 0.4em;
-  background-color: red;
-  border-radius: 3px;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
 }
-.link-to-top .chevron::before {
-  left: 0;
-  transform: translate(3px, -50%) rotate(45deg);
+main .newsLetter-section .newsLetter .subscribe p {
+  font-size: 2rem;
+  color: var(--txt-color1);
+  margin-bottom: 1.5em;
 }
-.link-to-top .chevron::after {
-  right: 0;
-  transform: translate(-3px, -50%) rotate(-45deg);
+@media screen and (min-width: 900px) {
+  main .newsLetter-section .newsLetter .subscribe p {
+    font-size: 4rem;
+  }
+}
+main .newsLetter-section .reviews h5 {
+  text-align: center;
+  text-transform: capitalize;
+  margin-block: 2em;
+  font-size: 2rem;
+}
+main .newsLetter-section .reviews .review {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main .newsLetter-section .reviews .review .box {
+  height: 8em;
+  width: 12em;
+  border-radius: 5px;
+  background-color: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  box-shadow: var(--shadow);
+}
+main .newsLetter-section .reviews .review .box .box-image {
+  width: 4em;
+  height: 4em;
+  border-radius: 100%;
+  border: 2px solid var(--txt-color1);
+  margin-top: -2em;
+}
+main .newsLetter-section .reviews .review .box .box-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+main .newsLetter-section .reviews .review .box .box-text {
+  text-align: center;
+  color: var(--txt-color2);
+}
+main .newsLetter-section .reviews .review .box .box-text h6 {
+  font-size: 1.4rem;
+}
+main .newsLetter-section .reviews .review .box .box-text p {
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
-.link-to-top-show {
-  visibility: visible;
-}
-
-@keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 main {
   /* ************ */
 }
@@ -532,6 +565,54 @@ button:hover {
   color: var(--primary-color);
 }
 
+.link-to-top {
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+  visibility: hidden;
+}
+.link-to-top .chevron {
+  position: relative;
+  height: 2em;
+  width: 3em;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  animation: bounce 3s ease-in-out infinite;
+}
+.link-to-top .chevron::before, .link-to-top .chevron::after {
+  position: absolute;
+  content: "";
+  height: 2em;
+  width: 0.4em;
+  background-color: rgb(168, 3, 91);
+  border-radius: 3px;
+  top: 50%;
+}
+.link-to-top .chevron::before {
+  left: 0;
+  transform: translate(8px, -50%) rotate(40deg);
+}
+.link-to-top .chevron::after {
+  right: 0;
+  transform: translate(-8px, -50%) rotate(-40deg);
+}
+
+.link-to-top-show {
+  visibility: visible;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .hero-login {
   align-items: center;
   /***************/

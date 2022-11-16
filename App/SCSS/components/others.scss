@@ -1,0 +1,50 @@
+.link-to-top{
+    position:fixed;
+    right:2em;
+    bottom:2em;
+    .chevron{
+        position: relative;
+        height:2em;
+        width:3em;
+        cursor: pointer;
+        background:transparent;
+        border:none;
+    
+        &::before,&::after{
+            position: absolute;
+            content:'';
+            height:2em;
+            width:0.4em;
+            background-color:rgb(168, 3, 91);
+            border-radius:3px;
+            top:50%;
+        }
+
+        &::before{
+            left:0;
+            transform:translate(8px,-50%)rotate(40deg);
+        }
+        &::after{
+            right:0;
+            transform:translate(-8px,-50%)rotate(-40deg);
+        }
+        animation:bounce 3s ease-in-out infinite;   
+    }
+    visibility:hidden;
+   
+}
+.link-to-top-show{
+    visibility:visible;
+}
+
+@keyframes bounce{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.5);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
